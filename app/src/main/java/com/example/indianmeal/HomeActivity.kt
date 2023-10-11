@@ -1,11 +1,33 @@
 package com.example.indianmeal
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import com.example.indianmeal.databinding.ActivityMainBinding
+import com.example.indianmeal.fragments.SplashScreen
+lateinit var binding :ActivityMainBinding
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding=ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setup()
+    }
+
+    private fun setup() {
+        val splashScreen=SplashScreen()
+        changeFragment(splashScreen)
+
+    }
+
+
+
+    private fun changeFragment(fragment:Fragment){
+        val transaction=supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment,fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }
