@@ -13,9 +13,14 @@
         ></androidx.fragment.app.FragmentContainerView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu=""/>
+        app:menu="@menu/menu"
+        app:itemIconSize="30dp"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/black"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
