@@ -3,9 +3,11 @@ package com.example.indianmeal
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.window.SplashScreen
 import androidx.fragment.app.Fragment
 import com.example.indianmeal.databinding.ActivityMainBinding
-import com.example.indianmeal.fragments.SplashScreen
+import com.example.indianmeal.databinding.ActivityMainBinding.inflate
+
 lateinit var binding :ActivityMainBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -17,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setup() {
-        val splashScreen=SplashScreen()
+        val splashScreen= SplashScreen()
         changeFragment(splashScreen)
 
     }
