@@ -1,17 +1,22 @@
 package com.example.indianmeal
 
-import android.opengl.Visibility
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.example.indianmeal.data.Constants
+import com.example.indianmeal.data.DataManeger
 import com.example.indianmeal.databinding.ActivityMainBinding
+import com.example.indianmeal.fragments.Home
 import com.example.indianmeal.fragments.SplashScreen
+import com.example.indianmeal.util.CsvParser
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
 lateinit var binding :ActivityMainBinding
 val handler= Handler()
-val home=Home()
+val home= Home()
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,11 +38,19 @@ class HomeActivity : AppCompatActivity() {
     private fun replaceSplashScreen() {
         handler.postDelayed({setFragment(home)
             binding.bottomNavigation.visibility= View.VISIBLE},
-            2000)
+            Constants.handlerTime)
     }
 
-    private fun initial(){
+    private fun parseFile(){
 
+        val inputStream=assets.open("Indian_food.csv")
+        val buffer =BufferedReader(InputStreamReader(inputStream))
+        val parser=CsvParser()
+        buffer.forEachLine {
+        val currentLine =parser.parse(it)
+            DataManeger().addMeal(currentLine)
+
+        }
     }
 
 
