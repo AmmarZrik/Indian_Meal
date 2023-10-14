@@ -6,6 +6,6 @@
         android:title="" />
     <item android:id="@+id/lovely" android:icon="@drawable/icons_love"
         android:title="" />
-    <item android:id="@+id/more" android:icon="@drawable/icons_more"
+    <item android:id="@+id/about" android:icon="@drawable/icons_more"
         android:title="" />
 </menu>

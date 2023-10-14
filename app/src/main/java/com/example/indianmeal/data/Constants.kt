@@ -3,7 +3,6 @@ package com.example.indianmeal.data
 object Constants {
     //popular constant
 
-
     const val handlerTime:Long=2000
     //positions of tokens list
     const val mealName: Int = 0

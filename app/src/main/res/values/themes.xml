@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.IndianMeal" parent="Base.Theme.IndianMeal" />
+    <style name="Theme.IndianMeal" parent="Base.Theme.IndianMeal" >
+        <item name="colorPrimary">@color/gradient_color</item>
+    </style>
 </resources>
