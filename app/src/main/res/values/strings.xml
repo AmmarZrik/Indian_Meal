@@ -1,10 +1,5 @@
 <resources>
     <string name="app_name">Indian Meal</string>
-    <string name="text_about">المطبخ الهندي يتكون من مجموعة متنوعة من المأكولات الإقليمية والتقليدية المحلية في شبه القارة الهندية نظرًا للتنوع في التربة والمناخ والثقافةوالمجموعات العرقية والمهن، تتنوع هذه المأكولات بشكل كبير وتستخدم التوابل والأعشاب والخضروات والفواكه المتوفرة محليًا.\nلمطبخ الهندي يتميز بتنوع أطباقه وكثرة التوابل فيه لذا تتمتع بروائح زكية ومميزة عن الأطعمة الأخرى لذلك يفضل معظم الطهاة هذا المجال فهو سهل الممارسة كما يستعمل الهنديون ورق الكاري الذي يتمتع بمذاق حار والأرز وقد عرفوا بطبق أرز الكاري ودجاج الكاري، والدجاج التندوري.\nيتأثر الطعام الهندي أيضًا بشكل كبير بالدين، ولا سيما الهندوسية والإسلام، والخيارات والتقاليد الثقافية.</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
