@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Widget.Theme.IndianMeal.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="text_size_big">
+        <item name="android:textSize">32dp</item>
+    </style>
+    <style name="text_size_small">
+        <item name="android:textSize">25dp</item>
+    </style>
+</resources>
