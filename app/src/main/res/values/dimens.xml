@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="large_text">50sp</dimen>
+    <dimen name="heigth_button_signyp">55dp</dimen>
+    <dimen name="cornerradius_button">20dp</dimen>
+    <dimen name="textsize_button_signup">22dp</dimen>
+    <dimen name="height_edittext">55dp</dimen>
+    <dimen name="heigth_item_activitymain">200dp</dimen>
+    <dimen name="textsize_nameitem">20dp</dimen>
+    <dimen name="height_image_about">260dp</dimen>
 </resources>
