@@ -12,4 +12,10 @@
     <string name="oo">oo</string>
     <string name="d">d</string>
     <string name="search">Search</string>
+    <string name="cooking">Cooking</string>
+    <string name="experience">Experience</string>
+    <string name="like_a_chef">Like A chef</string>
+    <string name="get_started">Get Started</string>
+    <string name="_4_5">4.5</string>
+    <string name="_450">450</string>
 </resources>
