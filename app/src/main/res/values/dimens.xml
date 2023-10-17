@@ -5,7 +5,8 @@
     <dimen name="cornerradius_button">20dp</dimen>
     <dimen name="textsize_button_signup">22sp</dimen>
     <dimen name="height_edittext">55dp</dimen>
-    <dimen name="heigth_item_activitymain">match_parent</dimen>
+    <dimen name="heigth_item_activitymain">250dp</dimen>
+    <dimen name="heigth_item_lovely">match_parent</dimen>
     <dimen name="textsize_nameitem">20sp</dimen>
     <dimen name="textsize_nameitemlovely">28sp</dimen>
     <dimen name="height_image_about">260dp</dimen>
