@@ -18,4 +18,12 @@
     <string name="get_started">Get Started</string>
     <string name="_4_5">4.5</string>
     <string name="_450">450</string>
+    <string name="signup_to">SignUp to</string>
+    <string name="m">M</string>
+    <string name="ea">ea</string>
+    <string name="l">L</string>
+    <string name="enter_username">Enter UserName</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="lovely">Lovely</string>
 </resources>
