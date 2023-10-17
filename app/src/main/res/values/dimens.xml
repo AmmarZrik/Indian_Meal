@@ -3,7 +3,7 @@
     <dimen name="large_text">50sp</dimen>
     <dimen name="heigth_button_signyp">55dp</dimen>
     <dimen name="cornerradius_button">20dp</dimen>
-    <dimen name="textsize_button_signup">22sp</dimen>
+    <dimen name="textsize_small">22sp</dimen>
     <dimen name="height_edittext">55dp</dimen>
     <dimen name="heigth_item_activitymain">250dp</dimen>
     <dimen name="heigth_item_lovely">match_parent</dimen>

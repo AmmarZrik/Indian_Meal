@@ -26,4 +26,7 @@
     <string name="enter_password">Enter Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="lovely">Lovely</string>
+    <string name="webview">WebView</string>
+    <string name="preparation">preparation</string>
+    <string name="more"><![CDATA[more >>]]></string>
 </resources>

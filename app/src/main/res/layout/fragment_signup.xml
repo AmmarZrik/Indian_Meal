@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/sign_up"
                 android:textColor="@color/white"
-                android:textSize="@dimen/textsize_button_signup"
+                android:textSize="@dimen/textsize_small"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
