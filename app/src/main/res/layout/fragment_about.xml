@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.About">
-    <?xml version="1.0" encoding="utf-8"?>
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black"
+        tools:context=".fragments.About"
         >
 
-        <TextView
-            android:id="@+id/indianFood"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="60dp"
-            android:text="@string/indian"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/indianFood"
+        style="@style/text_size_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/indian"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/F"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toEndOf="@+id/indianFood"
-            app:layout_constraintStart_toEndtOf="@id/indianFood"
-            app:layout_constraintTop_toTopOf="@+id/indianFood" />
+    <TextView
+        android:id="@+id/textView"
+        style="@style/text_size_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/F"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/indianFood"
+        app:layout_constraintTop_toTopOf="@+id/indianFood" />
 
         <TextView
             android:id="@+id/textView1"
@@ -72,10 +68,10 @@
         <TextView
             android:id="@+id/detailIndianFood"
             style="@style/text_size_small"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:paddingEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_about"
@@ -85,4 +81,3 @@
             app:layout_constraintTop_toBottomOf="@+id/imageViewAbout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>

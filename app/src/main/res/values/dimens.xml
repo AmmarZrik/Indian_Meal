@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="large_text">50sp</dimen>
+    <dimen name="large_text">50dp</dimen>
     <dimen name="heigth_button_signyp">55dp</dimen>
     <dimen name="cornerradius_button">20dp</dimen>
     <dimen name="textsize_small">22sp</dimen>
     <dimen name="height_edittext">55dp</dimen>
     <dimen name="heigth_item_activitymain">250dp</dimen>
-    <dimen name="heigth_item_lovely">match_parent</dimen>
-    <dimen name="textsize_nameitem">20sp</dimen>
-    <dimen name="textsize_nameitemlovely">28sp</dimen>
-    <dimen name="height_image_about">260dp</dimen>
+    <dimen name="textsize_nameitem">20dp</dimen>
+    <dimen name="textsize_nameitemlovely">28dp</dimen>
+    <dimen name="height_image_about">250dp</dimen>
 </resources>

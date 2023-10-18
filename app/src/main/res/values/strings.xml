@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Indian Meal</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_about">المطبخ الهندي يتكون من مجموعة متنوعة من المأكولات الإقليمية والتقليدية المحلية في شبه القارة الهندية. نظرًا للتنوع في التربة والمناخ والثقافة والمجموعات العرقية والمهن، تتنوع هذه المأكولات بشكل كبير وتستخدم التوابل والأعشاب والخضروات والفواكه المتوفرة محليًا.
 
@@ -28,5 +27,5 @@
     <string name="lovely">Lovely</string>
     <string name="webview">WebView</string>
     <string name="preparation">preparation</string>
-    <string name="more"><![CDATA[more >>]]></string>
+    <string name="more">more</string>
 </resources>
