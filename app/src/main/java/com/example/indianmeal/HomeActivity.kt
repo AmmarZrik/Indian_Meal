@@ -18,7 +18,7 @@ import com.example.indianmeal.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-lateinit var binding: ActivityMainBinding
+
 var doubleCliclBack = false
 val handler = Handler()
 val homeFragment = Home()
@@ -27,8 +27,10 @@ val searchFragment = Search()
 val lovelyFragment = LovelyMeals()
 
 class HomeActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setup()
