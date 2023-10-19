@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.SplashScreen"
-    android:background="@drawable/gradient_background">
+    android:background="@color/white">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
@@ -43,19 +43,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Indian"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
-            android:textStyle="bold"
             android:fontFamily="@font/charm_bold"
    />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Meal"
+            android:text=" meal"
             android:textColor="@color/main_color"
             android:textSize="@dimen/large_text"
-            android:textStyle="bold"
             android:fontFamily="@font/charm_bold"
             />
 

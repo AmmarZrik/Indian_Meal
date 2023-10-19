@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradiant_item_activitymain">
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/image_item"
@@ -39,7 +39,7 @@
                 android:layout_marginTop="20dp"
                 android:maxLines="1"
                 android:text="name_meal"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/textsize_nameitem"
                 app:layout_constraintStart_toEndOf="@+id/image_item"
                 app:layout_constraintTop_toTopOf="@+id/image_item" />
@@ -52,7 +52,7 @@
                 android:layout_marginTop="15dp"
                 android:drawableLeft="@drawable/baseline_star_24"
                 android:text="@string/_4_5"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/textsize_nameitem"
                 app:layout_constraintStart_toEndOf="@+id/image_item"
                 app:layout_constraintTop_toBottomOf="@+id/name_meal" />
@@ -64,7 +64,7 @@
                 android:layout_marginTop="15dp"
                 android:drawableLeft="@drawable/baseline_star_24"
                 android:text="@string/_450"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/textsize_nameitem"
                 app:layout_constraintStart_toEndOf="@+id/image_item"
                 app:layout_constraintTop_toBottomOf="@+id/rate" />

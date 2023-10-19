@@ -6,84 +6,21 @@
         android:layout_width="match_parent"
         tools:context=".fragments.Search"
         android:layout_height="match_parent"
-        android:background="@drawable/gradiant_start_activity">
+        android:background="@color/white">
 
-    <TextView
-        android:id="@+id/Search"
-        style="@style/text_size_big"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/search"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/text_size_big"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/F"
-        android:textColor="@color/white"
-
-        app:layout_constraintStart_toEndOf="@+id/Search"
-        app:layout_constraintTop_toTopOf="@+id/Search" />
-
-        <TextView
-            android:id="@+id/textView1"
-            style="@style/text_size_big"
-            android:textColor="@color/myColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oo"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/textView2"
-            style="@style/text_size_big"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/d"
-            app:layout_constraintStart_toEndOf="@+id/textView1"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/edit_search"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewsearch"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="postalAddress"
-        android:background="@drawable/edittext_search"
-        android:drawableEnd="@drawable/baseline_search_35"
-        android:hint="@string/search"
-        android:inputType="text"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Search" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerviewsearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            android:layout_marginHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/item_activitymain_search"
-
-            app:layout_constraintTop_toBottomOf="@id/edit_search"
-
-            />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_activitymain_search" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
