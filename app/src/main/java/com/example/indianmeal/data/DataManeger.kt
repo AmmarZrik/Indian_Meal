@@ -1,6 +1,6 @@
 package com.example.indianmeal.data
 
-class DataManeger {
+object DataManeger {
     val listOfMeals= mutableListOf<Meals>()
     fun addMeal(meal:Meals){
         listOfMeals.add(meal)

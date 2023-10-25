@@ -9,4 +9,8 @@ import com.example.indianmeal.databinding.FragmentSearchBinding
 class Search : BaseFragment<FragmentSearchBinding>() {
     override val inflate: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSearchBinding
         get() = FragmentSearchBinding::inflate
+
+    override fun setup() {
+        TODO("Not yet implemented")
+    }
 }

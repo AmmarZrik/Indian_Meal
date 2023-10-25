@@ -10,5 +10,9 @@ class SplashScreen : BaseFragment<FragmentSplashScreenBinding>() {
     override val inflate: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSplashScreenBinding
         get() = FragmentSplashScreenBinding::inflate
 
+    override fun setup() {
+        TODO("Not yet implemented")
+    }
+
 
 }

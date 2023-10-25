@@ -13,6 +13,7 @@ object Constants {
     const val webUrl: Int = 5
     const val components: Int = 6
     const val imageUrl: Int = 7
+    const val price:Int=8
 
 
 }

@@ -21,5 +21,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         return binding.root
 
     }
+    abstract fun setup()
 
 }

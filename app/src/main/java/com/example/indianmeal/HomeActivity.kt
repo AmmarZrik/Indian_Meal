@@ -5,6 +5,7 @@ import com.example.indianmeal.fragments.LovelyMeals
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -17,6 +18,7 @@ import com.example.indianmeal.fragments.SplashScreen
 import com.example.indianmeal.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.lang.Exception
 
 
 var doubleCliclBack = false
@@ -37,10 +39,11 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setup() {
+
         val splashScreen = SplashScreen()
         setFragment(splashScreen)
         replaceSplashScreen()
-        parseFile()
+
         navigateFragment()
 
 
@@ -61,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun replaceSplashScreen() {
         handler.postDelayed(
-            {
+            {   parseFile()
                 setFragment(homeFragment)
                 binding.bottomNavigation.visibility = View.VISIBLE
             },
@@ -81,16 +84,23 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-
     private fun parseFile() {
         val inputStream = assets.open("Indian_food.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
         val parser = CsvParser()
+
+
+
+        
         buffer.forEachLine {
             val currentLine = parser.parse(it)
-            DataManeger().addMeal(currentLine)
+            DataManeger.addMeal(currentLine)}
 
-        }
+                Log.i("Zz", DataManeger.listOfMeals.size.toString())
+
+
+
+
     }
 
     override fun onBackPressed() {

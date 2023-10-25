@@ -8,4 +8,8 @@ import com.example.indianmeal.fragments.BaseFragment
 class LovelyMeals : BaseFragment<FragmentLovelyMealsBinding>() {
     override val inflate: (LayoutInflater, ViewGroup?, Boolean) -> FragmentLovelyMealsBinding
         get() = FragmentLovelyMealsBinding::inflate
+
+    override fun setup() {
+        TODO("Not yet implemented")
+    }
 }

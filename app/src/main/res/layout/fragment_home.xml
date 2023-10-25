@@ -6,56 +6,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.Home">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingBottom="50dp"
+        ></androidx.recyclerview.widget.RecyclerView>
 
-        <TextView
-            android:id="@+id/Lovely"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/indian"
-            android:textColor="@color/black"
-            android:fontFamily="@font/charm_bold"
-/>
-
-        <TextView
-            android:id="@+id/textView"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/F"
-            android:textColor="@color/black"
-            android:fontFamily="@font/charm_bold"
-
-            />
-
-        <TextView
-            android:id="@+id/textView1"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oo"
-            android:textColor="@color/main_color"
-            android:fontFamily="@font/charm_bold"
-
-            />
-
-        <TextView
-            android:id="@+id/textView2"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/d"
-            android:textColor="@color/black"
-            android:fontFamily="@font/charm_bold"
-
-            />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

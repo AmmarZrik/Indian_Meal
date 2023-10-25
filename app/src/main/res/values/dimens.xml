@@ -10,4 +10,5 @@
     <dimen name="textsize_nameitem">20sp</dimen>
     <dimen name="textsize_nameitemlovely">28sp</dimen>
     <dimen name="height_image_about">250dp</dimen>
+    <dimen name="smalltext">20sp</dimen>
 </resources>
