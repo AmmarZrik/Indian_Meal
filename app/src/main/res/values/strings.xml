@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">Indian Meal</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="text_about">المطبخ الهندي يتكون من مجموعة متنوعة من المأكولات الإقليمية والتقليدية المحلية في شبه القارة الهندية. نظرًا للتنوع في التربة والمناخ والثقافة والمجموعات العرقية والمهن، تتنوع هذه المأكولات بشكل كبير وتستخدم التوابل والأعشاب والخضروات والفواكه المتوفرة محليًا.
+    <string name="text_about">Indian cuisine consists of a variety of regional and traditional cuisines local to the Indian subcontinent.\n Due to the diversity in soil, climate, culture, ethnic groups and professions, these cuisines are very diverse and use locally available spices, herbs, vegetables and fruits.\n
 
-المطبخ الهندي يتميز بتنوع أطباقه وكثرة التوابل فيه لذا تتمتع بروائح زكية ومميزة عن الأطعمة الأخرى لذلك يفضل معظم الطهاة هذا المجال فهو سهل الممارسة كما يستعمل الهنديون ورق الكاري الذي يتمتع بمذاق حار والأرز وقد عرفوا بطبق أرز الكاري ودجاج الكاري، والدجاج التندوري.
+Indian cuisine is characterized by the variety of its dishes and the abundance of spices in it, so it has bright and distinctive aromas from other foods, so most chefs prefer this area, it is easy to practice, as Indians use curry paper, which has a spicy taste, and rice, and they were known for curry rice, curry chicken, and tandoori chicken.\n
 
-يتأثر الطعام الهندي أيضًا بشكل كبير بالدين، ولا سيما الهندوسية والإسلام، والخيارات والتقاليد الثقافية</string>
+Indian food is also heavily influenced by religion, in particular Hinduism and Islam, cultural choices and traditions\n</string>
     <string name="indian">Indian</string>
     <string name="F">F</string>
     <string name="oo">oo</string>
     <string name="d">d</string>
     <string name="search">Search</string>
-    <string name="cooking">Cooking</string>
-    <string name="experience">Experience</string>
-    <string name="like_a_chef">Like A chef</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Description">It is characterized by the variety of its dishes and the abundance of spices in it, so it has bright and distinctive smells from other foods</string>
+    <string name="like_a_chef">Like A </string>
     <string name="get_started">Get Started</string>
     <string name="_4_5">4.5</string>
     <string name="_450">450</string>
@@ -28,4 +28,11 @@
     <string name="webview">WebView</string>
     <string name="preparation">preparation</string>
     <string name="more">more</string>
+    <string name="indians_use">Indians use curry leaves, which have a spicy taste, and rice..</string>
+    <string name="welcome">welcome</string>
+    <string name="history_of_indian_food">History of Indian Food</string>
+    <string name="spices">Since the very beginning of history, India has been known as The land of spices .\nThe Chinese, Arabs and Europeans came to the coasts of India in search of spices that grow here, they have been used since ancient history, mentioned in ancient Indian texts known as Vedas, in ancient papyri and in the Old Testament.\nHistorical records indicate that in 80 BC, when the city of Alexandria became the busiest trading center on earth, its markets were selling Indian spices on their way to the markets of the Greek and Roman empires.\nThe Department of Indian antiquities has announced the discovery of 100 thousand Roman coins in the delta of the Cauvery river, in southern India on the ancient historical Spice Route.\nThere are more than 80 types of spices grown around the world, of which 50 are in India alone.\n\n</string>
+    <string name="name_meal">name_meal</string>
+    <string name="detailmeal">DetailMeal</string>
+    <string name="indian_spices">Indian ٍٍSpices</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.indianmeal.fragments
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.indianmeal.databinding.FragmentAboutBinding
@@ -10,6 +11,11 @@ class About : BaseFragment<FragmentAboutBinding>() {
         get() = FragmentAboutBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
+        binding.apply {
+            titleIndianFood.setOnClickListener {
+                val i= Intent(context, StartPageFragment::class.java)
+                startActivity(i)
+            }
+        }
     }
 }
