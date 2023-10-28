@@ -18,11 +18,12 @@ class Home : BaseFragment<FragmentHomeBinding>() {
 
     override fun setup() {
         val list = listOf<HomeItem>(
-            HomeItem("puplar meals",ItemType.ITEM_FOOD_FLIPER,DataManeger.listOfMeals.shuffled()),
-            HomeItem("puplar meals", ItemType.ITEM_FOOD, DataManeger.listOfMeals.shuffled()),
-            HomeItem("puplar meals", ItemType.ITEM_FOOD, DataManeger.listOfMeals.shuffled()),
+            HomeItem("Random meals",ItemType.ITEM_FOOD_FLIPER,),
+            HomeItem("popular meals", ItemType.ITEM_FOOD, ),
+            HomeItem("All meals", ItemType.ITEM_FOOD,),
         )
-        binding.homeRecyclerView.adapter = HomeAdabter(list)
+        binding.homeRecyclerView.adapter=HomeAdabter(list)
+
 
 
     }
