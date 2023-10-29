@@ -6,9 +6,11 @@
     <dimen name="textsize_small">22sp</dimen>
     <dimen name="textsize_big">30sp</dimen>
     <dimen name="height_edittext">55dp</dimen>
-    <dimen name="heigth_item_activitymain">250dp</dimen>
+    <dimen name="heigth_item_activitymain">230dp</dimen>
     <dimen name="textsize_nameitem">20sp</dimen>
     <dimen name="textsize_nameitemlovely">28sp</dimen>
     <dimen name="height_image_about">250dp</dimen>
     <dimen name="smalltext">20sp</dimen>
+    <dimen name="size_text_start">40sp</dimen>
+    <dimen name="text_size_indianfood">37sp</dimen>
 </resources>
