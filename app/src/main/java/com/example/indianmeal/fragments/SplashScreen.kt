@@ -11,7 +11,7 @@ class SplashScreen : BaseFragment<FragmentSplashScreenBinding>() {
         get() = FragmentSplashScreenBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
+
     }
 
 
