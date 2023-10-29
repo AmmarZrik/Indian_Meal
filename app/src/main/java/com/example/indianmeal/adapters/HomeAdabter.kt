@@ -10,15 +10,15 @@ import com.example.indianmeal.R
 import com.example.indianmeal.data.Constants
 import com.example.indianmeal.data.DataManeger
 import com.example.indianmeal.data.HomeItem
-import com.example.indianmeal.databinding.ItemIndianFoodBinding
 import com.example.indianmeal.databinding.ItemParentHorizontalBinding
+import com.example.indianmeal.databinding.ItemTitleBinding
 import com.example.indianmeal.util.ItemType
 
 class HomeAdabter(val list: List<HomeItem>) : RecyclerView.Adapter<BaseViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         val parentItemView =
             LayoutInflater.from(parent.context).inflate(R.layout.item_parent_horizontal, parent,false)
-        val titleItemView=LayoutInflater.from(parent.context).inflate(R.layout.item_indian_food,parent,false)
+        val titleItemView=LayoutInflater.from(parent.context).inflate(R.layout.item_title,parent,false)
         return if(viewType== VIEW_TITLE)
             TitleViewHolder(titleItemView)
         else
@@ -63,12 +63,10 @@ class HomeAdabter(val list: List<HomeItem>) : RecyclerView.Adapter<BaseViewHolde
                             }, Constants.handlerTime)
                         icon.visibility=View.GONE}
                     }
-
                 }
 
 
 }
-
      }
 
 
@@ -95,6 +93,6 @@ class HomeViewHolder(item: View) : BaseViewHolder(item) {
     val binding = ItemParentHorizontalBinding.bind(item)
 }
 class TitleViewHolder(item: View):BaseViewHolder(item){
-    val binding=ItemIndianFoodBinding.bind(item)
+    val binding=ItemTitleBinding.bind(item)
 }
 

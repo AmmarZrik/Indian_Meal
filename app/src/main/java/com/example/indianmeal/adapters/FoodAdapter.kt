@@ -27,7 +27,9 @@ class FoodAdapter(val list: List<Meals>):RecyclerView.Adapter<FoodViewHolder>() 
         Glide.with(holder.itemView).asBitmap().apply(RequestOptions.overrideOf(200,300)).load(current.imageUrl).into(it.flipFoodImg)
         it.mealsName.text=current.mealName
         it.costMeals.text=current.price
-        it.timeMeals.text=current.totalTime }
+        it.timeMeals.text=current.totalTime
+        it.cuisine.text=current.cuisine
+    }
     }
 }
 class FoodViewHolder(item: View) :RecyclerView.ViewHolder(item){

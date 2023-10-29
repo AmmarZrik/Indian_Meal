@@ -29,6 +29,7 @@ class AdapterFliper(val list: List<Meals>):RecyclerView.Adapter<FliperViewHolder
             it.mealsName.text=current.mealName
             it.costMeals.text=current.price
             it.timeMeals.text=current.totalTime
+            it.cuisine.text=current.cuisine
         }
         holder.itemView.clearAnimation()
         holder.itemView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.context,android.R.anim.fade_in))

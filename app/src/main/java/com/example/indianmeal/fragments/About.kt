@@ -10,6 +10,5 @@ class About : BaseFragment<FragmentAboutBinding>() {
         get() = FragmentAboutBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
-    }
+  }
 }

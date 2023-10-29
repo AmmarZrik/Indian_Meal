@@ -8,8 +8,8 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="280dp"
+        android:layout_width="190dp"
+        android:layout_height="260dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -50,6 +50,7 @@
                     />
 
                 <LinearLayout
+                    android:paddingVertical="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -57,7 +58,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/icon_price"
+                        android:src="@drawable/baseline_attach_money_24"
                         android:tint="@color/white"></ImageView>
                     <TextView
                         android:id="@+id/costMeals"
@@ -80,8 +81,34 @@
 
                         android:text="50"
                         android:textColor="@color/white"></TextView>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icons_kebab"
+                        android:tint="@color/white"
+                        android:layout_marginLeft="10dp"
+                        ></ImageView>
+                    <TextView
+                        android:id="@+id/cuisine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTint="@color/white"
+                        android:text="50"
+                        android:textColor="@color/white"
+                        android:maxLines="1"></TextView>
                 </LinearLayout>
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/love"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/baseline_favorite_border_24"
+                android:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

@@ -10,6 +10,5 @@ class LovelyMeals : BaseFragment<FragmentLovelyMealsBinding>() {
         get() = FragmentLovelyMealsBinding::inflate
 
     override fun setup() {
-        TODO("Not yet implemented")
     }
 }
