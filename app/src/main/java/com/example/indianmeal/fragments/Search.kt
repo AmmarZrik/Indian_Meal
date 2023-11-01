@@ -22,10 +22,11 @@ import com.example.indianmeal.adapters.MealAdapter
 import com.example.indianmeal.data.DataManeger
 import com.example.indianmeal.data.Meals
 import com.example.indianmeal.databinding.FragmentSearchBinding
+import com.example.indianmeal.util.OnClickItem
 import java.util.Locale
 
 
-class Search : BaseFragment<FragmentSearchBinding>(), MealAdapter.OnItemClickListener {
+class Search : BaseFragment<FragmentSearchBinding>(), OnClickItem {
     private lateinit var rv_meal: RecyclerView
     private lateinit var adapter: MealAdapter
     private var mlist = DataManeger.listOfMeals
@@ -71,13 +72,13 @@ class Search : BaseFragment<FragmentSearchBinding>(), MealAdapter.OnItemClickLis
             .icon(R.drawable.filter,true)
             .background(R.drawable.backgrounddialog)
             .onPositive(
-                "Filter for the Name",
+                "NameMeals",
                 R.drawable.backgroundbuttomdialog,
                 ContextCompat.getColor(context as Activity, R.color.white))
             {
                 Filter_for_theName()
             }
-            .onNegative("Filter for the Cuisine",
+            .onNegative("Cuisine",
                 R.drawable.backgroundbuttomdialog,
                 ContextCompat.getColor(context as Activity, R.color.white))
             {
@@ -139,8 +140,43 @@ class Search : BaseFragment<FragmentSearchBinding>(), MealAdapter.OnItemClickLis
         }
     }
 
-    override fun onItemClick(position: Int) {
+    override fun onItemClick(
+        position: Int,
+        imageUrl: String,
+        price: String,
+        totalTime: String,
+        cuisine: String,
+        preparation: String,
+        mealName: String
+    ) {
+        Toast.makeText(context,"onItemClick",Toast.LENGTH_SHORT).show()
+//        val intent = Intent( context, DetailMeal::class.java)
+//        intent.putExtra("imageUrl1",imageUrl)
+//        intent.putExtra("price1",price)
+//        intent.putExtra("totalTime1",totalTime)
+//        intent.putExtra("cuisine1",cuisine)
+//        intent.putExtra("preparation1",preparation)
+//        intent.putExtra("mealName1",mealName)
+//        startActivity(intent)
+    }
+
+    override fun onloveItemClick(
+        position: Int,
+        imageUrl: String,
+        price: String,
+        totalTime: String,
+        cuisine: String,
+        preparation: String,
+        mealName: String
+    ) {
+        Toast.makeText(context,"onloveItemClick",Toast.LENGTH_SHORT).show()
         val intent = Intent( context, LovelyMeals::class.java)
+        intent.putExtra("imageUrl",imageUrl)
+        intent.putExtra("price",price)
+        intent.putExtra("totalTime",totalTime)
+        intent.putExtra("cuisine",cuisine)
+        intent.putExtra("preparation",preparation)
+        intent.putExtra("mealName",mealName)
         startActivity(intent)
     }
 
