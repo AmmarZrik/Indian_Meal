@@ -4,5 +4,6 @@
     <color name="white">#FFFFFF</color>
     <color name="main_color">#E83845</color>
     <color name="grey">#393939</color>
+    <color name="backgound_searchview">#CACACA</color>
 
 </resources>
