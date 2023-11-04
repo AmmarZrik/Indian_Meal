@@ -16,16 +16,18 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="62dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu"
         app:itemIconSize="30dp"
         app:itemBackground="@color/white"
         app:itemIconTint="@drawable/icon_selector"
-        app:itemPaddingTop="1dp"
+        app:itemPaddingTop="5dp"
 
         />
-
-
+<ViewFlipper
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:inAnimation="@android:anim/slide_in_left"></ViewFlipper>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

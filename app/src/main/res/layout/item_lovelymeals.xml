@@ -1,95 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:backgroundTint="@color/main_color"
+        app:cardCornerRadius="360dp"
+        app:cardElevation="11dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+        <ImageView
+            android:id="@+id/meal_image"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/burger" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="320dp"
+        android:layout_height="520dp"
         android:background="@color/white"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-         >
-
-            <ImageView
-                android:id="@+id/image_item"
-                android:layout_width="match_parent"
-                android:layout_marginHorizontal="15dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="80dp"
-                android:src="@drawable/tomatoes"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/name_meal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:maxLines="1"
-                android:text="name_meal"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize_nameitemlovely"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/image_item" />
-
-            <TextView
-                android:id="@+id/detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="DetailMeal"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize_nameitem"
-                app:layout_constraintStart_toStartOf="@+id/name_meal"
-                app:layout_constraintTop_toBottomOf="@+id/name_meal" />
-
-            <TextView
-                android:id="@+id/rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_star_24"
-                android:text="@string/_4_5"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize_nameitem"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/baseline_star_24"
-                android:text="@string/_450"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize_nameitem"
-                app:layout_constraintStart_toStartOf="@+id/detail"
-                app:layout_constraintTop_toBottomOf="@+id/detail" />
-
+            android:paddingBottom="10dp">
 
             <ImageView
                 android:id="@+id/love"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/love"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/main_color" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icons_kebab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableTint="@color/white"
+                    android:maxLines="1"
+                    android:text="Cuisine : "
+                    android:textSize="@dimen/lovely_text_item"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="@color/white"
+                    android:maxLines="1"
+                    android:text="50"
+                    android:textSize="@dimen/lovely_text_item"
+
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/name_meal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_attach_money_24" />
+
+                <TextView
+                    android:id="@+id/costMeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_clock" />
+
+                <TextView
+                    android:id="@+id/timeMeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/name_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="60dp"
+                android:maxWidth="300dp"
+                android:maxLines="1"
+                android:text="name_meal"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/textsize_nameitemlovely"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/love" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icons_ingredients" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableTint="@color/white"
+                    android:maxLines="1"
+                    android:text="Components :"
+                    android:textSize="@dimen/lovely_text_item"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableTint="@color/white"
+                android:maxLines="11"
+                android:paddingHorizontal="10dp"
+                android:text="Components :"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

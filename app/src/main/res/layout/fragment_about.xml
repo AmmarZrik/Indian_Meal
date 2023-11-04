@@ -20,8 +20,8 @@
                     android:id="@+id/imageViewAbout1"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/height_image_about"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/indian"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/intro"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

@@ -10,10 +10,15 @@ data class Meals(
     val webUrl: String,
     val components: String,
     val imageUrl: String,
-    val price :String
-//
-//    val webUrl: String="https://www.archanaskitchen.com/kashmiri-kokur-yakhni-recipe-chicken-cooked-in-yogurt",
-//    val components: String="aa",
-//    val imageUrl: String="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Shaheen_Ali/Kokur_Yakhni_Chicken_cooked_in_Yogurt__Kashmiri_Non_Veg.jpg",
-//    val price :String="60"
-)
+    val price :String,
+    val id: Int = setId(),
+    var lovely:Boolean=false,
+
+){
+    companion object{
+        var id =0
+
+        fun setId():Int{id++
+            return id}
+    }
+}

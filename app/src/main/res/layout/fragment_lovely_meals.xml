@@ -8,57 +8,11 @@
         tools:context=".fragments.LovelyMeals"
         android:background="@color/white"
         >
-
-        <TextView
-            android:id="@+id/Lovely"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/lovely"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="50dp"/>
-
-        <TextView
-            android:id="@+id/textView"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/F"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/Lovely"
-            app:layout_constraintTop_toTopOf="@+id/Lovely" />
-
-        <TextView
-            android:id="@+id/textView1"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oo"
-            android:textColor="@color/main_color"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/Lovely" />
-
-        <TextView
-            android:id="@+id/textView2"
-            style="@style/text_size_big"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/d"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/textView1"
-            app:layout_constraintTop_toTopOf="@+id/Lovely" />
-
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerviewlovelymeals"
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:scrollbars="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Lovely" />
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>

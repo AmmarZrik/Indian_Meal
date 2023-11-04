@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -18,9 +20,6 @@ import com.example.indianmeal.fragments.SplashScreen
 import com.example.indianmeal.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.lang.Exception
-
-
 var doubleCliclBack = false
 val handler = Handler()
 val homeFragment = Home()
@@ -39,13 +38,20 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setup() {
-
+        DataManeger.listOfLovelyMeals.addAll(DataManeger.getLovelyList(this))
         val splashScreen = SplashScreen()
         setFragment(splashScreen)
         replaceSplashScreen()
-
         navigateFragment()
 
+
+    }
+
+     fun checkFragment(fragment: Fragment) {
+        if(fragment is Home||fragment is Search ||fragment is LovelyMeals||fragment is About)
+            binding.bottomNavigation.visibility = View.VISIBLE
+        else
+            binding.bottomNavigation.visibility = View.GONE
 
     }
 
@@ -66,21 +72,18 @@ class HomeActivity : AppCompatActivity() {
         handler.postDelayed(
             {   parseFile()
                 setFragment(homeFragment)
-                binding.bottomNavigation.visibility = View.VISIBLE
             },
             Constants.handlerTime
         )
     }
 
-    private fun setFragment(fragment: Fragment) {
+    fun setFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment, fragment)
-
         transaction.commit()
-        if (fragment is SplashScreen) {
-            binding.bottomNavigation.visibility = View.INVISIBLE
-            fragmentManager.popBackStack()
-        }
+        checkFragment(fragment)
+
+
 
     }
 
@@ -88,15 +91,11 @@ class HomeActivity : AppCompatActivity() {
         val inputStream = assets.open("Indian_food.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
         val parser = CsvParser()
-
-
-
-        
         buffer.forEachLine {
             val currentLine = parser.parse(it)
             DataManeger.addMeal(currentLine)}
 
-                Log.i("Zz", DataManeger.listOfMeals.size.toString())
+                Log.i("Zz", DataManeger.listOfMeals.toString())
 
 
 
@@ -104,11 +103,18 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (doubleCliclBack)
-            super.onBackPressed()
+        if (doubleCliclBack){
+            super.onBackPressed()}
+        setFragment(Home())
+
         doubleCliclBack = true
         Toast.makeText(this, "Click back again to exit", Toast.LENGTH_SHORT).show()
         handler.postDelayed({ doubleCliclBack = false }, Constants.handlerTime)
     }
 
+    override fun onStop() {
+        super.onStop()
+        DataManeger.saveLovelyList(DataManeger.listOfLovelyMeals,this)
+
+    }
 }
