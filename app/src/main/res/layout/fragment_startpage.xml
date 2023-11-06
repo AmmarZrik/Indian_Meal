@@ -5,25 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    >
-    <ImageView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/image_start"
-        android:layout_width="match_parent"
-        android:layout_height="370dp"
-        android:alpha="0.8"
-        android:background="@drawable/gradiant"
-        android:scaleType="fitXY"
-        android:src="@drawable/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/gradiant">
 
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:alpha="0.7"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/spices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <TextView
         android:id="@+id/indianFood"
         style="@style/text_size_big"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/charm_bold"
         android:text="@string/indian"
         android:textColor="@color/black"
@@ -64,32 +75,33 @@
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
 
-    <TextView
-        android:id="@+id/indians_use"
-        style="@style/text_size_big"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:paddingHorizontal="20dp"
-        android:text="@string/indians_use"
-        android:textColor="#FF9800"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/button_getstarted"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/indians_use"-->
+<!--        style="@style/text_size_big"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:text="@string/indians_use"-->
+<!--        android:textColor="@color/main_color"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/button_getstarted"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.404"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:text="@string/welcome"
         android:textColor="@color/main_color"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_start" />
 
@@ -97,21 +109,21 @@
         android:id="@+id/Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:paddingHorizontal="20dp"
         android:text="@string/Description"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/indians_use"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/button_getstarted"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="30dp"
         app:cardCornerRadius="20dp"
