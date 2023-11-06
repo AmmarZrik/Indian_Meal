@@ -2,6 +2,7 @@ package com.example.indianmeal.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.example.indianmeal.HomeActivity
 import com.example.indianmeal.adapters.HomeAdabter
 import com.example.indianmeal.adapters.LovelyMealsAdapter
 import com.example.indianmeal.data.DataManeger
@@ -15,6 +16,7 @@ class LovelyMeals : BaseFragment<FragmentLovelyMealsBinding>() {
         get() = FragmentLovelyMealsBinding::inflate
 
     override fun setup() {
+        (this@LovelyMeals.context as HomeActivity).checkFragment(this)
         val list= listOf(HomeItem("",ItemType.LOVELY_FOOD))
         binding.recyclerView.adapter=HomeAdabter(list)
 

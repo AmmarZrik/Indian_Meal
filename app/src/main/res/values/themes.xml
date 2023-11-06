@@ -8,5 +8,6 @@
     <style name="Theme.IndianMeal" parent="Base.Theme.IndianMeal" >
         <item name="colorPrimary">@color/grey</item>
         <item name="colorSecondaryContainer">@color/main_color</item>
+        <item name="colorSecondary">@color/main_color</item>
     </style>
 </resources>

@@ -5,6 +5,7 @@ object Constants {
 
     const val handlerTime:Long=3000
     const val meal_id="meal_id"
+    const val url_key="key"
     const val SHARED_NAME="save_data"
     const val KEY_SHARED_PREFRENCES="KEY"
     //positions of tokens list

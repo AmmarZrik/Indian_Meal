@@ -1,6 +1,7 @@
 package com.example.indianmeal.util
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.example.indianmeal.HomeActivity
 import com.example.indianmeal.R
 import com.example.indianmeal.adapters.BaseViewHolder
@@ -29,12 +30,19 @@ object Functions {
         bundle.putInt(Constants.meal_id,current.id)
         val fragment= MealDetails()
         fragment.arguments=bundle
-        val fragmentManager=(holder.itemView.context as HomeActivity).supportFragmentManager
-        val transaction=fragmentManager.beginTransaction()
+        val transaction=(holder.itemView.context as HomeActivity).supportFragmentManager.beginTransaction()
         transaction.add(R.id.fragment,fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
+    fun setFragment(currentFragment: Fragment,newFragment: Fragment) {
+        val transaction = (currentFragment.context as HomeActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment, newFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
 
+
+
+    }
 
 }

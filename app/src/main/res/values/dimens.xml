@@ -13,4 +13,5 @@
     <dimen name="smalltext">20sp</dimen>
     <dimen name="size_text_start">40sp</dimen>
     <dimen name="text_size_indianfood">37sp</dimen>
+    <dimen name="lovely_text_item">20sp</dimen>
 </resources>

@@ -24,10 +24,8 @@
         app:itemIconTint="@drawable/icon_selector"
         app:itemPaddingTop="5dp"
 
+
         />
-<ViewFlipper
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-android:inAnimation="@android:anim/slide_in_left"></ViewFlipper>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

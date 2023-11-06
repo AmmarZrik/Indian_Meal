@@ -15,8 +15,10 @@ import com.example.indianmeal.data.Constants
 import com.example.indianmeal.data.DataManeger
 import com.example.indianmeal.databinding.ActivityMainBinding
 import com.example.indianmeal.fragments.Home
+import com.example.indianmeal.fragments.MealDetails
 import com.example.indianmeal.fragments.Search
 import com.example.indianmeal.fragments.SplashScreen
+import com.example.indianmeal.fragments.WebView
 import com.example.indianmeal.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -35,14 +37,18 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setup()
+
+
+
     }
 
     private fun setup() {
-        DataManeger.listOfLovelyMeals.addAll(DataManeger.getLovelyList(this))
+
         val splashScreen = SplashScreen()
         setFragment(splashScreen)
         replaceSplashScreen()
         navigateFragment()
+
 
 
     }
@@ -71,6 +77,7 @@ class HomeActivity : AppCompatActivity() {
     private fun replaceSplashScreen() {
         handler.postDelayed(
             {   parseFile()
+                DataManeger.listOfLovelyMeals.addAll(DataManeger.getLovelyList(this))
                 setFragment(homeFragment)
             },
             Constants.handlerTime
@@ -82,6 +89,7 @@ class HomeActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment, fragment)
         transaction.commit()
         checkFragment(fragment)
+
 
 
 
@@ -103,13 +111,28 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (doubleCliclBack){
-            super.onBackPressed()}
-        setFragment(Home())
 
-        doubleCliclBack = true
-        Toast.makeText(this, "Click back again to exit", Toast.LENGTH_SHORT).show()
-        handler.postDelayed({ doubleCliclBack = false }, Constants.handlerTime)
+            when (supportFragmentManager.findFragmentById(R.id.fragment) ) {
+                is Home ->{   if (doubleCliclBack) { super.onBackPressed()
+            }
+                else{
+                    Toast.makeText(this,"Click Back Again..", Toast.LENGTH_SHORT).show()
+                    doubleCliclBack = true
+                    handler.postDelayed({ doubleCliclBack = false }, Constants.handlerTime)
+                }}
+
+
+                is WebView  ->{ super.onBackPressed()}
+                is MealDetails ->{
+                    binding.bottomNavigation.visibility=View.VISIBLE
+                    super.onBackPressed()}
+
+                else -> {
+                    setFragment(Home())
+                    binding.bottomNavigation.selectedItemId=R.id.home}
+            }
+
+
     }
 
     override fun onStop() {

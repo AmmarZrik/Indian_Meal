@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:paddingHorizontal="10dp"
+    android:paddingBottom="10dp"
     tools:context=".fragments.MealDetails"
-
     >
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/image_item"
+        android:id="@+id/back_icon"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/baseline_keyboard_backspace_24_black"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,119 +29,226 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:src="@drawable/love"
-        android:tint="@color/main_color"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewdetail"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_image_about"
-        android:layout_marginTop="15dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_item" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
     <TextView
         android:id="@+id/name_meal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:maxWidth="200dp"
         android:maxLines="1"
-        android:text="@string/name_meal"
-        android:textColor="@color/main_color"
-        android:textSize="@dimen/textsize_nameitem"
+        android:text="name_detailmeals"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewdetail" />
-
-    <TextView
-        android:id="@+id/totaltime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:drawableLeft="@drawable/baseline_timer_24_black"
-        android:text="@string/_450"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textsize_nameitem"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name_meal" />
-
-    <TextView
-        android:id="@+id/detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/detailmeal"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textsize_nameitem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/name_meal"
-        app:layout_constraintTop_toBottomOf="@+id/name_meal" />
+        app:layout_constraintTop_toBottomOf="@+id/back_icon" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/preparation"
+        android:id="@+id/image__"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/heigth_button_signyp"
-        android:layout_marginHorizontal="15dp"
+        android:layout_height="@dimen/height_image_about"
+        android:layout_marginHorizontal="5dp"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/main_color"
         app:cardCornerRadius="@dimen/cornerradius_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detail">
+        app:layout_constraintTop_toBottomOf="@+id/name_meal">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/preparation"
-                android:textColor="@color/white"
-                android:textSize="@dimen/textsize_small"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imageViewdetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_image_about"
+                android:scaleType="centerCrop"
+                android:src="@drawable/start"
+                tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/heigth_button_signyp"
-        android:layout_marginHorizontal="15dp"
+
+
+<LinearLayout
+    android:id="@+id/linear_detail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="@+id/image__"
+    app:layout_constraintTop_toBottomOf="@id/image__"
+    android:layout_marginTop="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="27dp"
+        android:src="@drawable/icons_kebab"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/cuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTint="@color/white"
+        android:layout_marginStart="5dp"
+        android:maxLines="1"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/black"
-        app:cardCornerRadius="@dimen/cornerradius_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/preparation">
+        android:orientation="horizontal"
+>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:src="@drawable/icon_clock"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/timeMeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/white"
+            android:text="50"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_attach_money_24"
+            app:tint="@color/black"
+             />
+
+        <TextView
+            android:id="@+id/costMeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-5dp"
+            android:text="50"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+ />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/more"
-                android:textColor="@color/white"
-                android:textSize="@dimen/textsize_small"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_detail">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/components_detailMeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="components:"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_color"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/components"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_about"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textsize_nameitem"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/components_detailMeals"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/preparation_detailMeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:text="preparation:"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_color"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/components"
+                />
+
+                <TextView
+                    android:id="@+id/preparation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="preparation"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textsize_nameitem"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/preparation_detailMeals"
+                    tools:ignore="MissingConstraints" />
 
 
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/more_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/heigth_button_signyp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/black"
+                    app:cardCornerRadius="@dimen/cornerradius_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/preparation">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
