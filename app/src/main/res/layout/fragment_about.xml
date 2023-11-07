@@ -104,13 +104,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp"
+
                             >
                             <ImageView
-                                android:id="@+id/image1"
+                                android:id="@+id/image5"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/height_image_about"
+                                android:src="@drawable/food"
                                 android:scaleType="centerCrop"
-                                 />
+                                />
                         </androidx.cardview.widget.CardView>
 
 
@@ -119,36 +121,80 @@
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp"
                             >
-                        <ImageView
-                            android:id="@+id/image2"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_image_about"
-                            android:scaleType="fitXY"
-                            />
+                            <ImageView
+                                android:id="@+id/image6"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_image_about"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/food1"
+
+                                />
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp"
                             >
-                        <ImageView
-                            android:id="@+id/image3"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_image_about"
-                            android:scaleType="fitXY"
-                            />
+                            <ImageView
+                                android:id="@+id/image7"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_image_about"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/food2"
+
+                                />
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp"
                             >
-                        <ImageView
-                            android:id="@+id/image4"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/height_image_about"
-                            android:scaleType="fitXY"
-                         />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_image_about"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/food3"
+
+                                />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_image_about"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/food4"
+
+                                />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_image_about"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/food5"
+
+                                />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_image_about"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/food6"
+
+                                />
                         </androidx.cardview.widget.CardView>
                     </ViewFlipper>
                     <TextView
@@ -196,11 +242,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="10dp"
+
                             >
                             <ImageView
-                                android:id="@+id/image5"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/height_image_about"
+                                android:src="@drawable/spices"
                                 android:scaleType="centerCrop"
                                 />
                         </androidx.cardview.widget.CardView>
@@ -212,11 +259,12 @@
                             app:cardCornerRadius="10dp"
                             >
                             <ImageView
-                                android:id="@+id/image6"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/height_image_about"
                                 android:scaleType="fitXY"
-                               />
+                                android:src="@drawable/spices1"
+
+                                />
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -224,12 +272,14 @@
                             app:cardCornerRadius="10dp"
                             >
                             <ImageView
-                                android:id="@+id/image7"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/height_image_about"
                                 android:scaleType="fitXY"
+                                android:src="@drawable/spices2"
+
                                 />
                         </androidx.cardview.widget.CardView>
+
                     </ViewFlipper>
                     <TextView
                         android:id="@+id/IndianSpices"
