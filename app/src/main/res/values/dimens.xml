@@ -14,4 +14,6 @@
     <dimen name="size_text_start">40sp</dimen>
     <dimen name="text_size_indianfood">37sp</dimen>
     <dimen name="lovely_text_item">20sp</dimen>
+    <dimen name="text_startpage">60sp</dimen>
+    <dimen name="hieght_text_startpage">100dp</dimen>
 </resources>

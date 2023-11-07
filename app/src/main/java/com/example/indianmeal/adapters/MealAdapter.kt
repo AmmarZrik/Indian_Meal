@@ -10,6 +10,7 @@ import com.example.indianmeal.R
 import com.example.indianmeal.data.Meals
 import com.example.indianmeal.databinding.ItemSearchBinding
 import com.example.indianmeal.fragments.MealDetails
+import com.example.indianmeal.util.Functions
 
 class MealAdapter (var list: List<Meals>): RecyclerView.Adapter<MealViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealViewHolder {
@@ -28,13 +29,12 @@ class MealAdapter (var list: List<Meals>): RecyclerView.Adapter<MealViewHolder>(
           it.costMeals.text=current.price
             it.timeMeals.text=current.totalTime
             it.cuisine.text=current.cuisine
-            it.flipFoodImg.setOnClickListener {
-                val context=it.context
-                val intent = Intent( context, MealDetails::class.java)
-                context.startActivity(intent)
             }
+        holder.itemView.setOnClickListener {
+            Functions.transactionFragment(holder, current)
         }
-    }
+        }
+
 
 
 
@@ -43,7 +43,7 @@ class MealAdapter (var list: List<Meals>): RecyclerView.Adapter<MealViewHolder>(
     }
 
 }
-class MealViewHolder(val item: View) : RecyclerView.ViewHolder(item){
+class MealViewHolder(val item: View) : BaseViewHolder(item){
     val binding= ItemSearchBinding.bind(item)
 
 

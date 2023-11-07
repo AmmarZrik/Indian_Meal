@@ -1,6 +1,7 @@
 package com.example.indianmeal
 
 import android.app.Activity
+import android.content.pm.ActivityInfo
 import com.example.indianmeal.fragments.About
 import com.example.indianmeal.fragments.LovelyMeals
 import androidx.appcompat.app.AppCompatActivity
@@ -34,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setup()
