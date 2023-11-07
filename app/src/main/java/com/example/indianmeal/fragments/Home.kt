@@ -19,7 +19,7 @@ class Home : BaseFragment<FragmentHomeBinding>() {
 
     override fun setup() {
         (this@Home.context as HomeActivity).checkFragment(this)
-        val list = listOf<HomeItem>(
+        val list = listOf(
             HomeItem("Random meals",ItemType.ITEM_FOOD_FLIPER,),
             HomeItem("popular meals", ItemType.ITEM_FOOD, ),
             HomeItem("All meals", ItemType.ITEM_FOOD,),

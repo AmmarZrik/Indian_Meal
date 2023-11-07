@@ -1,13 +1,13 @@
 package com.example.indianmeal
 
+import android.app.Activity
 import com.example.indianmeal.fragments.About
 import com.example.indianmeal.fragments.LovelyMeals
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.transition.Fade
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -18,6 +18,7 @@ import com.example.indianmeal.fragments.Home
 import com.example.indianmeal.fragments.MealDetails
 import com.example.indianmeal.fragments.Search
 import com.example.indianmeal.fragments.SplashScreen
+import com.example.indianmeal.fragments.StartPage
 import com.example.indianmeal.fragments.WebView
 import com.example.indianmeal.util.CsvParser
 import java.io.BufferedReader
@@ -44,9 +45,16 @@ class HomeActivity : AppCompatActivity() {
 
     private fun setup() {
 
+
         val splashScreen = SplashScreen()
-        setFragment(splashScreen)
-        replaceSplashScreen()
+        if(getSharedPreferences(Constants.KEY_SHARED_PREFRENCES2,Activity.MODE_PRIVATE).getBoolean(Constants.booleanKey,false))
+        {setFragment(splashScreen)
+            replaceSplashScreen() }
+        else{
+            parseFile()
+        setFragment(StartPage())
+
+        }
         navigateFragment()
 
 
@@ -74,7 +82,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceSplashScreen() {
+     fun replaceSplashScreen() {
         handler.postDelayed(
             {   parseFile()
                 DataManeger.listOfLovelyMeals.addAll(DataManeger.getLovelyList(this))
@@ -85,6 +93,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun setFragment(fragment: Fragment) {
+        val exitTransition = Fade()
+        exitTransition.duration = 300
+        fragment.exitTransition = exitTransition
+
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment, fragment)
         transaction.commit()
